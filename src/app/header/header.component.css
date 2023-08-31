@@ -1,44 +1,69 @@
 header {
+  padding: 4px;
   display: flex;
   width: 100%;
-
 }
+.wrapper {
+  width: 200px;
+  display: flex;
+  gap: 12px;
+  justify-content: right;
+}
+
 
 #bars {
   font-size: 24px;
   margin: auto;
 }
-
 #logo {
   margin: auto;
-  flex: 1;
-  padding-left: 16px;
-  font-size: 40px;
+  height: 1.7rem;
 }
 
-#search {
+.searchbar {
+  display: flex;
   margin: auto;
-  flex: auto;
   font-size: 24px;
+}
+.searchbar input {
+  /* TODO: Responsive web design */
+  width: 550px;
+  height: 1.5rem;
+  border-radius: 48px 0 0 48px;
+  border: 1px solid #b5b5b5;
+  padding: 4px 16px;
+}
+.searchbar input:focus {
+  outline: none;
+  border-color: #0065c7;
+}
+.searchbar button {
+  border-radius: 0 48px 48px 0;
+  border: 1px solid #b5b5b5;
+  border-left: none;
+  padding: 4px 20px;
+  background-color: whitesmoke;
 }
 
 #bell {
-  margin: auto-;
+  margin-top: auto;
+  margin-bottom: auto;
   padding-right: 16px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
+/* USER PROFILE PICTURE */
 .circle {
-  height: 56px;
-  width: 56px;
+  margin-right: 16px;
+  height: 36px;
+  width: 36px;
   background-color: #bbb;
   border-radius: 50%;
   display: flex;
 }
-
 .circle fa-icon {
-  padding-top: 10px;
-  padding-left: 14px;
-
-  font-size: 32px;
+  padding-left: 9px;
+  padding-top: 6px;
+  font-size: 20px;
 }
+
