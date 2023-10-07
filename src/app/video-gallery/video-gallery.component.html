@@ -1,0 +1,10 @@
+<p>video-gallery works!</p>
+<div class="gallery">
+  <div *ngFor="let video of videoList">
+    <iframe width="512" height="288"
+            src="{{vidLink(video.id)}} | safe">
+    </iframe>
+    <h3>{{video.title}}</h3>
+  </div>
+</div>
+
