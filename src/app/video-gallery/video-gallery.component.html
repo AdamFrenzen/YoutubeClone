@@ -1,10 +1,13 @@
-<p>video-gallery works!</p>
 <div class="gallery">
-  <div *ngFor="let video of videoList">
-    <iframe width="512" height="288"
-            src="{{vidLink(video.id)}} | safe">
-    </iframe>
+  <div class="video" *ngFor="let video of videoList">
+    <div class="thumbnail" [style.background-image]="'url(' + video.thumbnail.url + ')'">
+      <span class="duration">{{ timeFormat(video.duration) }}</span>
+    </div>
     <h3>{{video.title}}</h3>
   </div>
 </div>
 
+<!--    <img [src]="video.thumbnail.url" alt="">-->
+<!--    <iframe width="512" height="288"-->
+<!--            [src]="vidLink(video.id)">-->
+<!--    </iframe>-->

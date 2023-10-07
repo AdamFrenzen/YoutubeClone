@@ -1,5 +1,35 @@
 .gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  /*text-align: center;*/
+  display: block;
+}
+
+.video {
+  padding: 20px;
+  width: 320px;
+  display: inline-block;
+}
+
+.thumbnail {
+  width: 320px;
+  height: 180px;
+  position: relative;
+}
+
+.duration {
+  padding: 3px 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.video h3 {
+  display: block;
+  /*width: 100px;*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
