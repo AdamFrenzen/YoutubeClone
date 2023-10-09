@@ -1,9 +1,13 @@
 <div class="gallery">
   <div class="video" *ngFor="let video of videoList">
-    <div class="thumbnail" [style.background-image]="'url(' + video.thumbnail.url + ')'">
+<!--    <div class="thumbnail" [style.background-image]="'url(' + video.thumbnail.url + ')'">-->
+    <div class="thumbnail">
+      <img [src]="video.thumbnail.url" alt="">
       <span class="duration">{{ timeFormat(video.duration) }}</span>
     </div>
-    <h3>{{video.title}}</h3>
+  <div class="details">
+      <h3>{{video.title}}</h3>
+    </div>
   </div>
 </div>
 
