@@ -25,13 +25,15 @@
   .gallery { grid-template-columns: repeat(5, 1fr)}
 }
 
+.flex {
+  display: flex;
+}
 
 .thumbnail {
   position: relative;
 }
 
 .thumbnail img {
-  /*min-width: 320px;*/
   border-radius: 10px;
   width: 100%;
   height: auto;
@@ -39,21 +41,33 @@
 
 .duration {
   font-size: 12px;
-  padding: 3px 5px;
+  padding: 3px 5px 2px;
   position: absolute;
   bottom: 0;
   right: 0;
   color: white;
   background-color: rgba(0,0,0,0.7);
   border-radius: 5px;
-  margin: 6px 4px;
+  margin: 8px 4px;
+}
+
+.pfp {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .details {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .details h3 {
+  font-size: 16px;
+  font-weight: 510;
+
   margin: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -61,3 +75,4 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
