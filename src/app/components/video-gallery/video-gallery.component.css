@@ -18,7 +18,7 @@
 @media (min-width: 1000px) {
   .gallery { grid-template-columns: repeat(3, 1fr)}
 }
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .gallery { grid-template-columns: repeat(4, 1fr)}
 }
 @media (min-width: 2000px) {
@@ -66,7 +66,7 @@
 
 .details h3 {
   font-size: 16px;
-  font-weight: 510;
+  font-weight: 600;
 
   margin: 0;
   display: -webkit-box;

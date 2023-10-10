@@ -1,19 +1,24 @@
 header {
   padding: 4px;
   display: flex;
+  justify-content: space-between;
+  gap: 5px;
   width: 100%;
 }
 .wrapper {
-  width: 200px;
   display: flex;
   gap: 12px;
   justify-content: right;
+}
+.wrapper.fixed {
+  width: 200px;
 }
 
 
 #bars {
   font-size: 24px;
   margin: auto;
+  padding-top: 3px;
 }
 #logo {
   margin: auto;
@@ -22,12 +27,14 @@ header {
 
 .searchbar {
   display: flex;
+  width: 50%;
   margin: auto;
   font-size: 24px;
 }
 .searchbar input {
   /* TODO: Responsive web design */
-  width: 550px;
+  width: 100%;
+  max-width: 600px;
   height: 1.5rem;
   border-radius: 48px 0 0 48px;
   border: 1px solid #b5b5b5;
