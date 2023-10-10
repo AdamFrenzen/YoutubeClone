@@ -65,6 +65,39 @@ export class VideoGalleryComponent implements OnInit {
     return (timeOutput[0]+':'+timeOutput[1])
   }
 
+  getAge(date: Date) {
+    const d1 = (new Date).getTime();
+    const d2 = (new Date(date)).getTime();
+    // return Math.floor(Math.abs(utc1 - utc2) / (36e5))
+    const hoursAgo = Math.trunc((d1 - d2) / 3600000);
+    if (hoursAgo < 24) {
+      return hoursAgo + ' hours ago';
+    }
+    const daysAgo = Math.floor(hoursAgo / 24);
+    if (daysAgo < 14) {
+      if (daysAgo === 1) {
+        return '1 day ago'
+      }
+      return daysAgo + ' days ago'
+    }
+    const weeksAgo = Math.floor(daysAgo / 7);
+    if (weeksAgo <= 4) {
+      return weeksAgo + ' weeks ago'
+    }
+    const monthsAgo = Math.floor(weeksAgo / 4);
+    if (monthsAgo < 12) {
+      if (monthsAgo === 1) {
+        return '1 month ago'
+      }
+      return monthsAgo + ' months ago'
+    }
+    const yearsAgo = Math.floor(monthsAgo / 12);
+    if (yearsAgo === 1) {
+      return '1 year ago'
+    }
+    return yearsAgo + ' years ago'
+  }
+
   vidLink(id: string) {
     const url = 'https://www.youtube.com/embed/' + id + '?origin=localhost:4200'
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)

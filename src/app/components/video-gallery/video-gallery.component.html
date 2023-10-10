@@ -9,7 +9,10 @@
       <div class="details">
         <h3>{{video.title}}</h3>
         <a href="">{{video.channelName}}</a>
-        <span>{{video.views | shortNumber}} views</span>
+        <div class="statistics">
+          <span>{{video.views | shortNumber}} views</span>
+          <span>• {{getAge(video.uploadDate)}}</span>
+        </div>
       </div>
     </div>
   </div>

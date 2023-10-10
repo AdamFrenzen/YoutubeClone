@@ -3,7 +3,7 @@
 }
 
 .video {
-  padding: 20px;
+  padding: 15px;
   max-width: 1000px;
   display: inline;
 }
@@ -74,5 +74,24 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.details a {
+  margin: 7px 0 6px 0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+.details a:hover {
+  color: #111111;
+}
+
+.statistics {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4d4d4d;
+  display: flex;
+  gap: 5px;
 }
 
