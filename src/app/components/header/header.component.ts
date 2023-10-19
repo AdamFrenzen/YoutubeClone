@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 // Fontawesome imports
 import { faBars, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons"
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-header',
@@ -14,4 +15,12 @@ export class HeaderComponent {
   protected readonly faMagnifyingGlass = faMagnifyingGlass;
   protected readonly faBell = faBell;
   protected readonly faUser = faUser;
+
+  searchBar = new FormGroup({
+    searchBox: new FormControl('')
+  })
+
+  search() {
+    console.log('submitted')
+  }
 }

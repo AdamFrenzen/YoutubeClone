@@ -16,7 +16,7 @@ export class VideoGalleryComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    this.asyncInit().then()
+    this.asyncInit().catch()
 
   }
 
@@ -99,7 +99,11 @@ export class VideoGalleryComponent implements OnInit {
   }
 
   vidLink(id: string) {
-    const url = 'https://www.youtube.com/embed/' + id + '?origin=localhost:4200'
+    const url = 'https://www.youtube.com/embed/' + id + '?autoplay=1&mute=1&origin=localhost:4200'
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)
+  }
+
+  test() {
+    console.log('test')
   }
 }

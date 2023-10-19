@@ -1,24 +1,30 @@
 <div class="gallery">
   <div class="video" *ngFor="let video of videoList">
-    <div class="thumbnail">
-      <img [src]="video.thumbnail.url" alt="">
-      <span class="duration">{{ timeFormat(video.duration) }}</span>
-    </div>
-    <div class="flex">
-      <img class="pfp" [src]="getVideoPFP(video.channelID)" alt="">
-      <div class="details">
-        <h3>{{video.title}}</h3>
-        <a href="">{{video.channelName}}</a>
-        <div class="statistics">
-          <span>{{video.views | shortNumber}} views</span>
-          <span>• {{getAge(video.uploadDate)}}</span>
+    <div class="click">
+
+      <div class="hover-wrapper">
+        <div class="thumbnail">
+          <img [src]="video.thumbnail.url" alt="">
+          <span class="duration">{{ timeFormat(video.duration) }}</span>
+        </div>
+
+        <div class="lock-aspect">
+          <iframe [src]="vidLink(video.id)" allow="autoplay"></iframe>
+        </div>
+
+      </div>
+
+      <div class="flex">
+        <img class="pfp" [src]="getVideoPFP(video.channelID)" alt="">
+        <div class="details">
+          <h3>{{video.title}}</h3>
+          <span class="channel"><a href="https://www.google.com/search?channel=fenc&client=firefox-b-1-d&q=set+a+tag+element+only+to+width+of+word">{{video.channelName}}</a></span>
+          <div class="statistics">
+            <span>{{video.views | shortNumber}} views</span>
+            <span>• {{getAge(video.uploadDate)}}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!--    <img [src]="video.thumbnail.url" alt="">-->
-<!--    <iframe width="512" height="288"-->
-<!--            [src]="vidLink(video.id)">-->
-<!--    </iframe>-->

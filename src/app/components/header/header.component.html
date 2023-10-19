@@ -25,10 +25,10 @@
     </span>
   </div>
 
-  <div id="search" class="searchbar">
-    <input type="text" placeholder="Search">
-    <button><fa-icon [icon]="faMagnifyingGlass"></fa-icon></button>
-  </div>
+  <form [formGroup]="searchBar" (ngSubmit)="search()" class="searchbar">
+    <input type="text" placeholder="Search" formControlName="searchBox">
+    <button type="submit"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></button>
+  </form>
 
   <div class="wrapper">
     <fa-icon id="bell" [icon]="faBell"></fa-icon>

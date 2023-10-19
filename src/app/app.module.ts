@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { VideoGalleryComponent } from './components/video-gallery/video-gallery.component';
 import { ShortNumberPipe } from './pipes/short-number.pipe';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import { ShortNumberPipe } from './pipes/short-number.pipe';
     VideoGalleryComponent,
     ShortNumberPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
