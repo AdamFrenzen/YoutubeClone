@@ -21,6 +21,6 @@ export class HeaderComponent {
   })
 
   search() {
-    console.log('submitted')
+    console.log('submitted', this.searchBar.get('searchBox')!.value)
   }
 }

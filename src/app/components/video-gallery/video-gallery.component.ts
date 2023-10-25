@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
@@ -17,20 +17,18 @@ export class VideoGalleryComponent implements OnInit {
 
   ngOnInit() {
     this.asyncInit().catch()
-
   }
 
   async asyncInit() {
-    let videos = await this.getVideos()
+    const videos = await this.getVideos()
     this.videoList = Object.values(JSON.parse(videos))
 
     this.videoList.forEach((item) => {
         this.channelIDs.push(item.channelID)
     })
 
-    let profileImagesRes = await this.getPFP(this.channelIDs)
+    const profileImagesRes = await this.getPFP(this.channelIDs)
     this.profileImages = JSON.parse(profileImagesRes)
-
   }
 
   async getVideos() {
@@ -41,7 +39,6 @@ export class VideoGalleryComponent implements OnInit {
   async getPFP(channelIds: Array<string>) {
     const ids = channelIds.join()
     const res = await fetch('http://localhost:3000/getProfileImages?channels='+ids);
-    console.log(res)
     return await res.json();
   }
 
@@ -68,7 +65,6 @@ export class VideoGalleryComponent implements OnInit {
   getAge(date: Date) {
     const d1 = (new Date).getTime();
     const d2 = (new Date(date)).getTime();
-    // return Math.floor(Math.abs(utc1 - utc2) / (36e5))
     const hoursAgo = Math.trunc((d1 - d2) / 3600000);
     if (hoursAgo < 24) {
       return hoursAgo + ' hours ago';
@@ -100,10 +96,7 @@ export class VideoGalleryComponent implements OnInit {
 
   vidLink(id: string) {
     const url = 'https://www.youtube.com/embed/' + id + '?autoplay=1&mute=1&origin=localhost:4200'
+    // const url = 'https://www.youtube.com/watch?v=' + id
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)
-  }
-
-  test() {
-    console.log('test')
   }
 }

@@ -48,6 +48,10 @@ header {
   border-left: none;
   padding: 4px 20px;
   background-color: whitesmoke;
+  cursor: pointer;
+}
+.searchbar button:hover {
+  background-color: #dcdcdc;
 }
 
 #bell {
