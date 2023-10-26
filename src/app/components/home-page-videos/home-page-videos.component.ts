@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-video-gallery',
-  templateUrl: './video-gallery.component.html',
-  styleUrls: ['./video-gallery.component.css']
+  selector: 'home-page-videos',
+  templateUrl: './home-page-videos.component.html',
+  styleUrls: ['./home-page-videos.component.css']
 })
 export class HomePageVideos implements OnInit {
 
