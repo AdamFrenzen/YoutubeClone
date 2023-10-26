@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoGalleryComponent } from './video-gallery.component';
+import { HomePageVideos } from './home-page-videos.component';
 
 describe('VideoGalleryComponent', () => {
-  let component: VideoGalleryComponent;
-  let fixture: ComponentFixture<VideoGalleryComponent>;
+  let component: HomePageVideos;
+  let fixture: ComponentFixture<HomePageVideos>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideoGalleryComponent ]
+      declarations: [ HomePageVideos ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VideoGalleryComponent);
+    fixture = TestBed.createComponent(HomePageVideos);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

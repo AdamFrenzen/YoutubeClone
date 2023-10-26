@@ -6,7 +6,7 @@ import { DomSanitizer } from "@angular/platform-browser";
   templateUrl: './video-gallery.component.html',
   styleUrls: ['./video-gallery.component.css']
 })
-export class VideoGalleryComponent implements OnInit {
+export class HomePageVideos implements OnInit {
 
   videoList: any[] = []
   channelIDs: string[] = []
