@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
-  selector: 'home-page-videos',
+  selector: 'app-home-page-videos',
   templateUrl: './home-page-videos.component.html',
   styleUrls: ['./home-page-videos.component.css']
 })
